@@ -5,7 +5,7 @@ $personneC = new PersonneController();
 $error = '';
 $personne = null;
 
-// ✅ récupérer l’ID depuis GET ou POST
+
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 } elseif (isset($_POST['id'])) {
@@ -15,10 +15,10 @@ if (isset($_GET['id'])) {
     exit();
 }
 
-// 🔎 afficher la personne actuelle
+
 $personne = $personneC->showPersonne($id);
 
-// 🔄 traiter la mise à jour
+
 if (
     isset($_POST['nom'], $_POST['prenom'], $_POST['email'], $_POST['age'])
 ) {
